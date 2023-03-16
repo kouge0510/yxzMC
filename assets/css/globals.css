@@ -1,0 +1,401 @@
+button, input, option, select, textarea {
+    outline: none
+}
+
+figcaption, li, ol, p, ul {
+    --tw-text-opacity: 1;
+    color: rgb(164 166 171/var(--tw-text-opacity))
+}
+
+p {
+    line-height: 27px
+}
+
+a {
+    color: rgb(254 135 30/var(--tw-text-opacity));
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none
+}
+
+a, button {
+    --tw-text-opacity: 1
+}
+
+a, button {
+    cursor: pointer;
+    border-style: none;
+    font-weight: 700;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s
+}
+
+    a:hover, button:hover {
+        --tw-brightness: brightness(1.1);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity))
+}
+
+h1 {
+    font-size: 2.25rem
+}
+
+@media (max-width:900px) {
+    h1 {
+        font-size: 2.15rem
+    }
+}
+
+h2 {
+    font-size: 1.7rem
+}
+
+@media (max-width:900px) {
+    h2 {
+        font-size: 1.6rem
+    }
+}
+
+h3 {
+    font-size: 1.6rem
+}
+
+@media (max-width:900px) {
+    h3 {
+        font-size: 1.5rem
+    }
+}
+
+h4 {
+    font-size: 1.5rem
+}
+
+@media (max-width:900px) {
+    h4 {
+        font-size: 1.4rem
+    }
+}
+
+h5 {
+    font-size: 1.4rem
+}
+
+@media (max-width:900px) {
+    h5 {
+        font-size: 1.3rem
+    }
+}
+
+h6 {
+    font-size: 1.3rem
+}
+
+@media (max-width:900px) {
+    h6 {
+        font-size: 1.2rem
+    }
+}
+
+code {
+    margin-left: .375rem;
+    margin-right: .375rem;
+    border-radius: 6px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 135 30/var(--tw-bg-opacity));
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .125rem;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(100 53 21/var(--tw-text-opacity))
+}
+
+blockquote, pre {
+    position: relative;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+    background-color: rgb(0 0 0/var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.3;
+    padding: 2rem;
+    font-size: 1.125rem;
+    font-weight: 900;
+    line-height: 2.25rem;
+    --tw-text-opacity: 1;
+    --tw-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    --tw-shadow-colored: 0 5px 12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow)
+}
+
+    blockquote, pre, pre > code {
+        color: rgb(255 255 255/var(--tw-text-opacity))
+    }
+
+        pre > code {
+            margin-left: 0;
+            margin-right: 0;
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            --tw-text-opacity: 1
+        }
+
+blockquote {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+strong {
+    font-weight: 700
+}
+
+.kg-card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px
+}
+
+    .kg-card:last-child {
+        margin-bottom: 0
+    }
+
+.kg-image-card {
+    max-width: 100%;
+    text-align: center
+}
+
+    .kg-image-card img {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        border-radius: 10px;
+        --tw-shadow: 0 5px 12px rgba(0,0,0,0.08);
+        --tw-shadow-colored: 0 5px 12px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow)
+    }
+
+figcaption {
+    margin-top: .5rem;
+    text-align: center
+}
+
+hr {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-color: rgb(112 112 112/var(--tw-border-opacity));
+    border-top: 1px rgb(112 112 112/var(--tw-border-opacity));
+    border-style: solid;
+    --tw-border-opacity: 0.3
+}
+
+li {
+    position: relative;
+    display: flex;
+    font-size: 1.05rem
+}
+
+ul {
+    padding-left: 2.5rem
+}
+
+
+ol {
+    padding-left: 2.5rem;
+    counter-reset: decimal
+}
+
+    ol li:before {
+        counter-increment: decimal;
+        content: counter(decimal) ".";
+        position: absolute;
+        left: -1.25rem
+    }
+
+.kg-callout-card, .kg-toggle-card, blockquote, pre {
+    box-shadow: 0 6px 12px -4px rgba(0,0,0,.2);
+    border: 1px solid hsla(0,0%,100%,.1)
+}
+
+.kg-callout-card {
+    height: 100%;
+    overflow: hidden;
+    white-space: pre-wrap
+}
+
+    .kg-callout-card .kg-callout-text {
+        display: inline-block;
+        text-align: left;
+        word-break: break-word
+    }
+
+    .kg-callout-card div.kg-callout-text {
+        overflow-wrap: break-word
+    }
+
+.kg-gallery-card .kg-gallery-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column
+}
+
+.kg-gallery-card .kg-gallery-row {
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem
+}
+
+    .kg-gallery-card .kg-gallery-row:last-child {
+        margin-bottom: 0
+    }
+
+@media (max-width:900px) {
+    .kg-gallery-card .kg-gallery-row {
+        margin-bottom: .75rem;
+        gap: .75rem
+    }
+}
+
+.kg-gallery-image > img {
+    border-radius: 10px
+}
+
+.kg-bookmark-icon, svg {
+    height: 1.25rem;
+    width: 1.25rem
+}
+
+.kg-embed-card {
+    height: 100%;
+    width: 100%
+}
+
+    .kg-embed-card iframe {
+        height: 500px;
+        width: 100%;
+        border-radius: 10px
+    }
+
+@media (max-width:900px) {
+    .kg-embed-card iframe {
+        height: 400px
+    }
+}
+
+@media (max-width:750px) {
+    .kg-embed-card iframe {
+        height: 330px
+    }
+}
+
+@media (max-width:550px) {
+    .kg-embed-card iframe {
+        height: 250px
+    }
+}
+
+@media (max-width:375px) {
+    .kg-embed-card iframe {
+        height: 200px
+    }
+}
+
+.kg-callout-card {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity))
+}
+
+.kg-bookmark-card {
+    --tw-bg-opacity: 1;
+    background-color: rgb(2 80 124/var(--tw-bg-opacity));
+    padding: 2rem
+}
+
+    .kg-bookmark-card .kg-bookmark-container {
+        display: flex
+    }
+
+@media (max-width:900px) {
+    .kg-bookmark-card .kg-bookmark-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center
+    }
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-content {
+    margin-right: 1.25rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity))
+}
+
+@media (max-width:900px) {
+    .kg-bookmark-card .kg-bookmark-container .kg-bookmark-content {
+        margin-top: 1.25rem
+    }
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-title {
+    margin-bottom: .75rem;
+    font-size: 25px
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-description {
+    margin-bottom: auto;
+    flex-grow: 1
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-metadata {
+    margin-top: auto;
+    display: flex;
+    align-items: center
+}
+
+@media (max-width:900px) {
+    .kg-bookmark-card .kg-bookmark-container .kg-bookmark-metadata {
+        margin-top: 1.25rem;
+        justify-content: center
+    }
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-metadata .kg-bookmark-icon {
+    margin-right: .5rem
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-thumbnail {
+    max-width: 350px
+}
+
+@media (max-width:900px) {
+    .kg-bookmark-card .kg-bookmark-container .kg-bookmark-thumbnail {
+        height: 150px;
+        max-width: 100%
+    }
+}
+
+.kg-bookmark-card .kg-bookmark-container .kg-bookmark-thumbnail > img {
+    border-radius: 10px
+}

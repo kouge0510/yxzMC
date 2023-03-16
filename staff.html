@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>夜行者MC</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap" />
+
+
+
+
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <!--SEO部分-->
+    <link rel="canonical" href="staff.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:site" content="@ghost" />
+
+    <meta name="generator" content="Ghost 4.48" />
+    <link rel="alternate" type="application/rss+xml" title="Blaze Gaming" href="rss/rss.xml" />
+
+    <script defer src="public/cards.min.js"></script>
+    <style>
+        :root {
+            --ghost-accent-color: #fe871e;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/cards.min.css">
+
+    <script src="assets/js/ndzn-head.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="抠哥">
+    <title>MyMC</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- MyMC CSS -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="assets/css/mymc.css" rel="stylesheet">
+</head>
+<body style="font-family:Azonix">
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(13,45,66,1) 100%);">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <a class="navbar-brand" href="index.html">夜行者MC</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><i class="fa fa-home"></i> 主页</a></li>
+                    <li><a href="rules.html"><i class="fa fa-info-circle"></i> 规则</a></li>
+                    <li class="active"><a href="staff.html"><i class="fa fa-star"></i> 项目参与成员</a></li>
+                    <li><a href="https://www.yxz6.tech/"><i class="fa fa-etsy"></i> 夜行者团队官方论坛</a></li>
+                    <li><a href="diary.html"><i class="fa fa-flag"></i> 开发日记</a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- /.container -->
+    <div class="page-body wow fadeIn animated">
+        <div class="container">
+
+
+            <div class="ndzn-staff-page" x-data="staff()" x-init="initTally">
+
+                <div class="panel groups" style="background-color:transparent">
+                    <h1 class="panel-title" style="color:azure">MC项目参与成员</h1>
+                    <div class="group mb-8 last:mb-0">
+
+                        <template x-for="(data, id) in staffData" :key="id">
+                            <div class="group mb-8 last:mb-0">
+                                <h2>
+                                    <i class="mdi mdi-badge-account-outline"></i><span x-text="data.group"></span>
+                                </h2>
+                                <div class="list">
+                                    <template x-for="(member, index) in data.members" :key="index">
+                                        <div class="member">
+                                            <img :src="member.img" alt="" />
+                                            <p x-text="member.name"></p>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+
+                <div class="panel staff-apply" style="background-color:black;border-radius:20px">
+                    <h1 class="panel-title" style="color:white;margin-bottom:10%">申请成为MC项目中的一员</h1>
+                    <p class="text-[15px] font-medium">
+                        你想成为管理员吗？你想体验所有的枪械以及载具么？我们欢迎一切有能力，常在线的玩家加入！
+                    </p>
+
+                    <a href="tencent://Message/?Uin=2985329668&websiteName=www.oicqzone.com&Menu=yes"><button class="btn is-orange">申请成为MC项目中的一员</button></a>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+                    defer></script>
+
+            <script>
+                const NDZN_STAFF_TALLY = {
+                    "formId": "n9rMXm",
+                    "popup": {
+                        "emoji": {
+                            "text": "👋",
+                            "animation": "wave"
+                        },
+                        "layout": "modal",
+                        "width": "800"
+                    }
+                }
+
+                const NDZN_STAFF_GROUPS = [
+                    {
+                        group: "拥有者",
+                        members: [
+                            {
+                                name: "夜行者团队",
+                                img: "assets/img/logo.png"
+                            }
+
+                        ]
+                    },
+                    {
+                        group: "插件开发者",
+                        members: [
+                            {
+                                name: "抠哥",
+                                img: "https://cravatar.eu/avatar/kouge0510/56.png"
+                            }
+                        ]
+                    },
+                    {
+                        group: "网站开发者",
+                        members: [
+                            {
+                                name: "抠哥",
+                                img: "https://cravatar.eu/avatar/kouge0510/56.png"
+                            }
+
+                        ]
+                    },
+                    {
+                        group: "建造者",
+                        members: [
+                            {
+                                name: "抠哥(练枪场，教程，枪战地图)",
+                                img: "https://cravatar.eu/avatar/kouge0510/56.png"
+                            },
+                            {
+                                name: "域雪(红石，主城)",
+                                img: "https://cravatar.eu/avatar/YuXueXD5/56.png"
+                            },
+                            {
+                                name: "dafei(枪战地图)",
+                                img: "https://cravatar.eu/avatar/steve/56.png"
+                            },
+                            {
+                                name: "大户爱(纪念堂)",
+                                img: "https://cravatar.eu/avatar/steve/56.png"
+                            },
+                            {
+                                name: "ZexS_3(枪械中心)",
+                                img: "https://cravatar.eu/avatar/ZexS_3/56.png"
+                            },
+                            {
+                                name: "一方通行(枪战地图)",
+                                img: "https://cravatar.eu/avatar/yifangkali/56.png"
+                            },
+                            {
+                                name: "必兮相语(枪战地图)",
+                                img: "https://cravatar.eu/avatar/steve/56.png"
+                            },
+
+                        ]
+                    },
+                    {
+                        group: "枪械模型设计",
+                        members: [
+                            {
+                                name: "抠哥",
+                                img: "https://cravatar.eu/avatar/kouge0510/56.png"
+                            },
+
+
+                        ]
+                    },
+                    {
+                        group: "主要管理者",
+                        members: [
+                            {
+                                name: "抠哥",
+                                img: "https://cravatar.eu/avatar/kouge0510/56.png"
+                            },
+                            {
+                                name: "域雪",
+                                img: "https://cravatar.eu/avatar/YuXueXD5/56.png"
+                            },
+                            {
+                                name: "一方通行",
+                                img: "https://cravatar.eu/avatar/yifangkali/56.png"
+                            },
+                            {
+                                name: "心辞",
+                                img: "https://cravatar.eu/avatar/colorful/56.png"
+                            }
+                        ]
+                    },
+                    {
+                        group: "枪械数据设计",
+                        members: [
+                            {
+                                name: "夕阳",
+                                img: "https://cravatar.eu/avatar/steve/56.png"
+                            },
+
+                        ]
+                    },
+                ]
+
+                const NDZN_VOTE_LINKS = [
+                    "https://servers-minecraft.net/server-blaze-gaming.1079/vote/",
+                    "https://topminecraftservers.org/vote/4405",
+                    "https://best-minecraft-servers.co/server-blaze-gaming.3642/vote",
+                    "https://minecraft-mp.com/server/195808/vote/",
+                    "https://minecraft-server-list.com/server/426212/vote/",
+                    "https://pixelmonservers.com/server/PlCRYvNt/vote",
+                    "https://minecraftservers.org/vote/499596",
+                ]
+
+                const NDZN_VOTE_REWARDS = [
+                    {
+                        name: "Pixelmon Vote Rewards",
+                        list: [
+                            {
+                                name: "Vote Crates",
+                                amount: "1"
+                            },
+                            {
+                                name: "Vote Point to spend at the VoteShop!",
+                                amount: "1"
+                            },
+                            {
+                                name: "Claim Blocks",
+                                amount: "15"
+                            },
+                            {
+                                name: "Coins ($)",
+                                amount: "3000"
+                            }
+                        ]
+                    },
+                    {
+                        name: "Skyblock Vote Rewards",
+                        list: [
+                            {
+                                name: "Vote Point to spend at the VoteShop!",
+                                amount: "1"
+                            },
+                        ]
+                    },
+                    {
+                        name: "Survival Vote Rewards",
+                        list: [
+                            {
+                                name: "Vote Point to spend at the VoteShop!",
+                                amount: "1"
+                            }
+                        ]
+                    },
+
+                ]
+
+            </script>
+            <script async src="https://tally.so/widgets/embed.js"></script>
+            <script>
+                function staff() {
+                    return {
+                        staffData: NDZN_STAFF_GROUPS || [],
+
+                        tally: NDZN_STAFF_TALLY || null,
+                        initTally() {
+                            if (!this.tally) return;
+                            const c = this.tally;
+                            const $btn = this.$refs.tallyButton;
+                            window.applyTallyHtmlAttributes($btn, c);
+                            if (window.location.hash.includes('apply')) {
+                                // a little cringe but should be robust enough
+                                window.TallyConfig = c;
+                                setTimeout(() => this.openTally(), 100);
+                            }
+                        },
+                        openTally() {
+                            if (!this.$refs.tallyButton) return;
+                            this.$refs.tallyButton.click();
+                        },
+                    };
+                }
+            </script>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- /.container -->
+    <!-- JavaScript -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script src="assets/js/ndzn.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+
+
+
+</body>
+</html>
