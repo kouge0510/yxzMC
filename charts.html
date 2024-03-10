@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>夜行者MC</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- MyMC CSS -->
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="assets/css/mymc.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+</head>
+<body>
+    
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <a class="navbar-brand" href="index.html">SMU NIGHT WALKER MC</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><i class="fa fa-home"></i> 主页</a></li>
+                    <li><a href="rules.html"><i class="fa fa-info-circle"></i> 规则</a></li>
+                    <li><a href="staff.html"><i class="fa fa-star"></i> 项目参加成员</a></li>
+					<li class="active"><a href="charts.html"><i class="fa fa-address-book-o"></i> 统计数据</a></li>
+                    <li><a href="https://www.yxz6.tech/"><i class="fa fa-etsy"></i> 夜行者团队官方论坛</a></li>
+                    <li><a href="diary.html"><i class="fa fa-flag"></i> 开发日记</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-7">
+				<!-- 图表容器 -->
+				<div id="main" style="height:800px;"></div>
+			</div>
+			<div class="col-md-5">
+				<!-- 特别大的两行字 -->
+				<div class="text-container" style="font-size: 3em;color:white;padding-top:50%">
+					现有玩家人数
+					<h2 style="color:aqua;">截至到2024.3.10</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- /.container -->
+    <!-- Big opening-->
+    <script>
+        new WOW().init();
+    </script>
+    <!-- JavaScript -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+	<script>
+	    // 引入 ECharts 主模块
+	
+	    var chartDom = document.getElementById('main');
+	    var myChart = echarts.init(chartDom);
+	    var option;
+		option = {
+		  tooltip: {
+			trigger: 'item'
+		  },
+		  legend: {
+			top: '5%',
+			left: 'center',
+			textStyle: {
+			  color: 'white' // 设置图例文字颜色为白色
+			}
+		  },
+		  toolbox: {
+			show: false,
+			feature: {
+			  dataView: {
+				show: true,
+				readOnly: false,
+				textStyle: {
+				  color: 'white' // 设置数据视图按钮的文字颜色为白色
+				}
+			  },
+			  restore: {
+				show: true,
+				textStyle: {
+				  color: 'white' // 设置恢复按钮的文字颜色为白色
+				}
+			  },
+			  saveAsImage: {
+				show: true,
+				textStyle: {
+				  color: 'white' // 设置保存图片按钮的文字颜色为白色
+				}
+			  }
+			}
+		  },
+		  series: [
+			{
+			  name: '统计表',
+			  type: 'pie',
+			  radius: ['40%', '70%'],
+			  avoidLabelOverlap: false,
+			  itemStyle: {
+				borderRadius: 10,
+				borderColor: '#fff',
+				borderWidth: 2
+			  },
+			  label: {
+				show: false,
+				position: 'center'
+			  },
+			  emphasis: {
+				label: {
+				  show: true,
+				  fontSize: 40,
+				  fontWeight: 'bold',
+				  color: 'white' // 设置文字颜色为白色
+				}
+			  },
+			  labelLine: {
+				show: false
+			  },
+			  data: [
+				{ value: 13, name: '校内管理团队' },
+				{ value: 4, name: '校外管理团队' },
+				{ value: 10, name: '其他大学玩家' },
+				{ value: 108, name: '本校玩家' },
+				{ value: 84, name: '校外玩家' },
+				
+			  ]
+			}
+		  ]
+		};
+
+		window.onresize = function() {
+		    myChart.resize();
+		};
+
+	    option && myChart.setOption(option);
+	</script>
+
+</body>
+</html>
